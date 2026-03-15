@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Output folders (don’t upload giant generated files)
+activity1_1/output/
+activity1_2/output/
+
+# OS junk
+.DS_Store
+Thumbs.db
