@@ -1,7 +1,7 @@
 # degree_calculator.py
 # -------------------------------------------------------------
 # UWE Advanced Algorithms - Activity 1.1 Degree Calculator
-# Inputs (your files):
+# Inputs:
 #   - activity1_1_marks.csv  (headerless, wide: student_id, code1, mark1, code2, mark2, ...)
 #   - cs modules.csv         (module_code, module_name)
 #
@@ -9,11 +9,7 @@
 #   - output/degree_results.csv
 #   - output/l5_breakdown.csv  (shows which L5 modules were used + credits taken)
 #
-# This matches your uploaded CSVs and the assignment’s calculation rules:
-#   L5: best 100 credits (exclude pass/fail if we had such flags)
-#   L6: all modules
-#   Final aggregate: (3 * L6_avg + L5_avg) / 4
-#   Classification: First / 2:1 / 2:2 / Third / Fail
+#Done by: Tanjil Siam , ID: 24024535
 # -------------------------------------------------------------
 
 import csv

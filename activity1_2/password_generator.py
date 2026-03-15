@@ -16,6 +16,7 @@
 # Output:
 #   - Write ALL valid passwords with 1-based indices to output/passwords_L{L}.txt
 #   - Print total count and (if L in {4,5,6}) expected counts for quick validation
+# Done by: Tanjil Siam , ID: 24024535
 # -------------------------------------------------------------
 
 import sys
