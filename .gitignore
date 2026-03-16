@@ -9,6 +9,7 @@ venv/
 # Output folders (don’t upload giant generated files)
 activity1_1/output/
 activity1_2/output/
+activity1_3/output/ 
 
 # OS junk
 .DS_Store
