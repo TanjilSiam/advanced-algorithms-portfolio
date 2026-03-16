@@ -1,12 +1,12 @@
-# Advanced Algorithms Portfolio  
+ Advanced Algorithms Portfolio  
 
 ### by **Tanjil Siam** – BSc Computer Science, UWE Bristol
 
 
 
-This repository contains my personal, portfolio‑ready Python implementations for the Advanced Algorithms module.  
+This repository contains my portfolio‑ready Python implementations for the **Advanced Algorithms** coursework at UWE Bristol.  
 
-Each activity demonstrates practical skills in **data processing**, **algorithm design**, **optimisation**, **graph theory**, **backtracking**, and **clean software engineering**.
+Each activity demonstrates skills in **data processing**, **algorithm design**, **optimisation**, **graph theory**, **path‑finding**, and **backtracking**.
 
 
 
@@ -14,33 +14,33 @@ Each activity demonstrates practical skills in **data processing**, **algorithm 
 
 
 
-# 📘 **Activity 1.1 — Degree Classification Engine**
+## 📘 Activity 1.1 — Degree Classification Engine
 
 
 
-A fully automated degree classification calculator following UWE’s credit‑weighted rules.
+A complete, automated degree classification calculator following UWE’s credit‑weighted rules.
 
 
 
-### ✅ Features
+### Features
 
-- Parses module codes to extract **credits** and **level**  
+- Extracts **level** and **credit** from module codes  
 
-- Computes **Level 5 best 100 credits** using weighted selection (supports fractional credits when required)  
+- Computes **Level 5 best 100 credits** (supports fractional credit usage when required)  
 
-- Computes **Level 6 weighted average** from all L6 modules  
+- Computes **Level 6 weighted average**  
 
-- Applies UWE’s final formula:  
+- Applies UWE formula: **(3 × L6 Average + L5 Average) / 4**  
 
-  **Final Aggregate = (3 × L6 Average + L5 Average) / 4**  
+- Applies classification bands (First, 2:1, 2:2, Third, Fail)  
 
-- Performs **“pass all modules”** validation  
+- Checks **pass‑all‑modules** rule  
 
-- Outputs two CSV files:
+- Outputs:
 
-  - `degree_results.csv` → aggregate + classification  
+  - `degree_results.csv`
 
-  - `l5_breakdown.csv` → modules chosen for best‑100 L5 calculation  
+  - `l5_breakdown.csv`
 
 
 
@@ -52,7 +52,6 @@ cd activity1_1
 
 python degree_calculator.py
 
-'''
 
 
 ---
@@ -63,29 +62,31 @@ python degree_calculator.py
 
 A combinatorial password generator using efficient backtracking + pruning.
 
-🔑 Rules enforced
+Rules
 
-Must include uppercase, lowercase, digit, special symbol
+Must include: uppercase, lowercase, digit, special symbol
 Must start with a letter
 Max 2 uppercase characters
 Max 2 special characters
 Character sets:
-A–E, a–e, 1–5, { $, &, % }
-📈 Validation
+A–E
+a–e
+1–5
+$, &, %
+Expected counts (for validation)
 
-Matches official expected counts:
-
-L=4 → 4500
-L=5 → 207,000
-L=6 → 5,287,500
+L = 4 → 4500
+L = 5 → 207000
+L = 6 → 5287500
 ▶ Run
 
 cd activity1_2
 
 python password_generator.py
 
-Outputs are written to:
-activity1_2/output/passwords_L{L}.txt
+Outputs saved in:
+
+activity1_2/output/
 
 
 
@@ -95,44 +96,44 @@ activity1_2/output/passwords_L{L}.txt
 
 🚆 Activity 1.3 — UK Railway Route Planner
 
-A shortest‑route optimisation tool operating on the full UK railway network dataset (over 500 stations).
+A shortest‑route engine using the full UK rail network dataset (500+ stations).
 
-🎯 Task
+Task
 
 Given:
 
-a start station
-an end station
-a list of required stations
-The program finds the lowest‑cost route that visits all required stations exactly once and ends at the destination.
+start station
+end station
+required stations (must be visited exactly once)
+Find the lowest‑cost route that starts at the start station, visits all required stations, and ends at the destination.
 
-🔧 Core Algorithm
+Algorithm (high level)
 
-Loads the railway graph from activity1_3_railnetwork_data.csv (undirected weighted edges).
-Normalises station names (case‑insensitive, whitespace‑tolerant).
-Identifies “important stations”: start + required + end.
-Runs Dijkstra from each important station.
-Tries all permutations of required stations to compute total cost.
-Selects the cheapest permutation.
-Rebuilds full station‑by‑station route.
-Saves human‑readable and JSON debug outputs.
-📄 Output files
-
-output/route_result.txt
-output/route_debug.json
+Load railway CSV (undirected, weighted graph)
+Normalise station names (case‑insensitive, trims whitespace)
+Identify important nodes (start + required + end)
+Compute Dijkstra shortest paths between important nodes
+Try all permutations of the required stations
+Sum segment costs, choose the cheapest ordering
+Rebuild the full station‑by‑station route
+Save results as text + JSON
 ▶ Run
 
 cd activity1_3
 
 python route_planner.py
 
-Example input:
+Example input (interactive prompts):
 
-Enter start station: london
+london
 
-Enter end station: exeter st davids
+exeter st davids
 
-Enter required stations (comma separated): bristol temple meads,reading
+bristol temple meads, reading
+
+Outputs saved in:
+
+activity1_3/output/
 
 
 
@@ -152,7 +153,7 @@ AdvancedAlgorithms/
 
     cs modules.csv
 
-    output/...
+    output/
 
 
 
@@ -160,7 +161,7 @@ AdvancedAlgorithms/
 
     password_generator.py
 
-    output/...
+    output/
 
 
 
@@ -172,7 +173,7 @@ AdvancedAlgorithms/
 
     task1_3_UK_Railway_Map.pdf
 
-    output/...
+    output/
 
 
 
@@ -189,10 +190,9 @@ AdvancedAlgorithms/
 🧑‍💻 About Me
 
 Tanjil Siam
-BSc Computer Science
-University of the West of England (UWE Bristol)
+BSc Computer Science — UWE Bristol
 
-I focus on algorithm design, optimisation, clean engineering, and writing solutions that are efficient, reproducible, and easy to understand.
+I focus on clean, efficient algorithmic solutions and practical engineering with clear outputs and reproducibility.
 
 
 
@@ -204,7 +204,3 @@ I focus on algorithm design, optimisation, clean engineering, and writing soluti
 
 This is a personal portfolio repository.
 All code written by Tanjil Siam.
-
-
-
----
