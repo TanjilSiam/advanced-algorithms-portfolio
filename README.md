@@ -194,21 +194,65 @@ activity1_3/output/
 
 
 
-## 📁 Repository Structure
+## Project Structure
 
 
 
-AdvancedAlgorithms/ activity1_1/ degree_calculator.py activity1_1_marks.csv cs modules.csv output/
+~~~
 
-activity1_2/ password_generator.py output/
+AdvancedAlgorithms/
 
-activity1_3/ route_planner.py activity1_3_railnetwork_data.csv task1_3_UK_Railway_Map.pdf output/
+├── activity1_1/
 
-.gitignore README.md
+│   ├── degree_calculator.py            # Degree classification engine
 
+│   ├── activity1_1_marks.csv           # Raw marks dataset
 
+│   ├── cs modules.csv                  # Module info
 
----
+│   └── output/                         # Generated CSV outputs
+
+│       ├── degree_results.csv
+
+│       └── l5_breakdown.csv
+
+│
+
+├── activity1_2/
+
+│   ├── password_generator.py           # Backtracking password generator
+
+│   └── output/                         # Generated password lists
+
+│       ├── passwords_L4.txt
+
+│       ├── passwords_L5.txt
+
+│       └── passwords_L6.txt
+
+│
+
+├── activity1_3/
+
+│   ├── route_planner.py                # UK rail network route optimiser
+
+│   ├── activity1_3_railnetwork_data.csv # Railway connections dataset
+
+│   ├── task1_3_UK_Railway_Map.pdf       # Reference map
+
+│   └── output/                          # Route result files
+
+│       ├── route_result.txt
+
+│       └── route_debug.json
+
+│
+
+├── .gitignore                           # Git ignore rules
+
+└── README.md                            # This file
+
+~~~
 
 
 
