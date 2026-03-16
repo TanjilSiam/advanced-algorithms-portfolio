@@ -4,47 +4,9 @@
 
 
 
-This repository contains my personal, portfolio‑ready implementations of several algorithmic tasks designed to demonstrate practical skills in **Python**, **data processing**, **backtracking**, **optimisation**, and **clean software engineering**.
+This repository contains my personal, portfolio‑ready Python implementations for the Advanced Algorithms module.  
 
-
-
-Currently included:
-
-
-
----
-
-
-
-## 📘 Activity 1.1 — Degree Classification Engine
-
-
-
-A Python tool that calculates a student's university degree classification based on UWE’s credit‑weighted rules:
-
-
-
-- Computes **Level 5 best 100 credits** (with fractional credit selection when needed)  
-
-- Computes **Level 6 weighted average** (all L6 modules)  
-
-- Applies final formula →  
-
-  **Final Aggregate = (3 × Level 6 Average + Level 5 Average) / 4**  
-
-- Determines classification: First, 2:1, 2:2, Third, or Fail  
-
-- Checks **pass‑all‑modules** requirement  
-
-- Outputs:
-
-  - `degree_results.csv` → final numbers + classifications  
-
-  - `l5_breakdown.csv` → which Level 5 modules were selected  
-
-
-
-This implementation showcases data parsing, weighted optimisation, validation logic, and clean CSV output generation.
+Each activity demonstrates practical skills in **data processing**, **algorithm design**, **optimisation**, **graph theory**, **backtracking**, and **clean software engineering**.
 
 
 
@@ -52,51 +14,43 @@ This implementation showcases data parsing, weighted optimisation, validation lo
 
 
 
-## 🔐 Activity 1.2 — Constrained Password Generator
+# 📘 **Activity 1.1 — Degree Classification Engine**
 
 
 
-A combinatorial password generator using **recursive backtracking** with heavy pruning for efficiency.
+A fully automated degree classification calculator following UWE’s credit‑weighted rules.
 
 
 
-**Rules enforced:**
+### ✅ Features
 
-- Must include **at least one** uppercase, lowercase, digit, and special symbol  
+- Parses module codes to extract **credits** and **level**  
 
-- Must **start with a letter**  
+- Computes **Level 5 best 100 credits** using weighted selection (supports fractional credits when required)  
 
-- Maximum **2 uppercase letters**  
+- Computes **Level 6 weighted average** from all L6 modules  
 
-- Maximum **2 special symbols**  
+- Applies UWE’s final formula:  
 
-- Character sets:
+  **Final Aggregate = (3 × L6 Average + L5 Average) / 4**  
 
-  - `A–E`, `a–e`, `1–5`, `{ $, &, % }`
+- Performs **“pass all modules”** validation  
+
+- Outputs two CSV files:
+
+  - `degree_results.csv` → aggregate + classification  
+
+  - `l5_breakdown.csv` → modules chosen for best‑100 L5 calculation  
 
 
 
-**Features:**
+### ▶ Run
 
-- Generates **all valid passwords** for any length `L`  
+```bash
 
-- Outputs to: `output/passwords_L{L}.txt`  
+cd activity1_1
 
-- Matches official reference counts for:
-
-  - `L = 4` → 4500  
-
-  - `L = 5` → 207,000  
-
-  - `L = 6` → 5,287,500  
-
-- Optimised with:
-
-  - Pruned search branches  
-
-  - Efficient prefix tracking  
-
-  - Buffered file writing (can handle millions of results)
+python degree_calculator.py
 
 
 
@@ -104,51 +58,33 @@ A combinatorial password generator using **recursive backtracking** with heavy p
 
 
 
-## 📁 Repository Structure
+🔐 Activity 1.2 — Constrained Password Generator
 
+A combinatorial password generator using efficient backtracking + pruning.
 
+🔑 Rules enforced
 
-AdvancedAlgorithms/ activity1_1/ degree_calculator.py activity1_1_marks.csv cs modules.csv output/ degree_results.csv l5_breakdown.csv
+Must include uppercase, lowercase, digit, special symbol
+Must start with a letter
+Max 2 uppercase characters
+Max 2 special characters
+Character sets:
+A–E, a–e, 1–5, { $, &, % }
+📈 Validation
 
-activity1_2/ password_generator.py output/ passwords_L4.txt passwords_L5.txt passwords_L6.txt
+Matches official expected counts:
 
-(activity1_3 and activity1_4 will be added later)
+L=4 → 4500
+L=5 → 207,000
+L=6 → 5,287,500
+▶ Run
 
+cd activity1_2
 
+python password_generator.py
 
----
-
-
-
-## 🚀 How to Run
-
-
-
-### Activity 1.1 (Degree Calculator)
-
-cd activity1_1 python degree_calculator.py
-
-
-
-### Activity 1.2 (Password Generator)
-
-cd activity1_2 python password_generator.py
-
-
-
----
-
-
-
-## 🧑‍💻 About Me
-
-
-
-**Tanjil Siam**  
-
-BSc Computer Science, University of the West of England (UWE Bristol)  
-
-Focused on algorithm design, optimisation, and practical engineering solutions.
+Outputs are written to:
+activity1_2/output/passwords_L{L}.txt
 
 
 
@@ -156,10 +92,118 @@ Focused on algorithm design, optimisation, and practical engineering solutions.
 
 
 
-## 📄 License
+🚆 Activity 1.3 — UK Railway Route Planner
+
+A shortest‑route optimisation tool operating on the full UK railway network dataset (over 500 stations).
+
+🎯 Task
+
+Given:
+
+a start station
+an end station
+a list of required stations
+The program finds the lowest‑cost route that visits all required stations exactly once and ends at the destination.
+
+🔧 Core Algorithm
+
+Loads the railway graph from activity1_3_railnetwork_data.csv (undirected weighted edges).
+Normalises station names (case‑insensitive, whitespace‑tolerant).
+Identifies “important stations”: start + required + end.
+Runs Dijkstra from each important station.
+Tries all permutations of required stations to compute total cost.
+Selects the cheapest permutation.
+Rebuilds full station‑by‑station route.
+Saves human‑readable and JSON debug outputs.
+📄 Output files
+
+output/route_result.txt
+output/route_debug.json
+▶ Run
+
+cd activity1_3
+
+python route_planner.py
+
+Example input:
+
+Enter start station: london
+
+Enter end station: exeter st davids
+
+Enter required stations (comma separated): bristol temple meads,reading
 
 
 
-This is a personal portfolio repository.  
+---
 
-All code written by **Tanjil Siam**.
+
+
+📁 Repository Structure
+
+AdvancedAlgorithms/
+
+  activity1_1/
+
+    degree_calculator.py
+
+    activity1_1_marks.csv
+
+    cs modules.csv
+
+    output/...
+
+
+
+  activity1_2/
+
+    password_generator.py
+
+    output/...
+
+
+
+  activity1_3/
+
+    route_planner.py
+
+    activity1_3_railnetwork_data.csv
+
+    task1_3_UK_Railway_Map.pdf
+
+    output/...
+
+
+
+  .gitignore
+
+  README.md
+
+
+
+---
+
+
+
+🧑‍💻 About Me
+
+Tanjil Siam
+BSc Computer Science
+University of the West of England (UWE Bristol)
+
+I focus on algorithm design, optimisation, clean engineering, and writing solutions that are efficient, reproducible, and easy to understand.
+
+
+
+---
+
+
+
+📄 License
+
+This is a personal portfolio repository.
+All code written by Tanjil Siam.
+
+
+
+---
