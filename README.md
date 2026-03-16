@@ -1,4 +1,4 @@
- Advanced Algorithms Portfolio  
+# Advanced Algorithms Portfolio  
 
 ### by **Tanjil Siam** – BSc Computer Science, UWE Bristol
 
@@ -46,11 +46,13 @@ A complete, automated degree classification calculator following UWE’s credit�
 
 ### ▶ Run
 
-```bash
+~~~bash
 
 cd activity1_1
 
 python degree_calculator.py
+
+~~~
 
 
 
@@ -58,31 +60,57 @@ python degree_calculator.py
 
 
 
-🔐 Activity 1.2 — Constrained Password Generator
+## 🔐 Activity 1.2 — Constrained Password Generator
 
-A combinatorial password generator using efficient backtracking + pruning.
 
-Rules
 
-Must include: uppercase, lowercase, digit, special symbol
-Must start with a letter
-Max 2 uppercase characters
-Max 2 special characters
-Character sets:
-A–E
-a–e
-1–5
-$, &, %
-Expected counts (for validation)
+A combinatorial password generator using efficient **backtracking + pruning**.
 
-L = 4 → 4500
-L = 5 → 207000
-L = 6 → 5287500
-▶ Run
+
+
+### Rules
+
+- Must include: uppercase, lowercase, digit, special symbol  
+
+- Must **start with a letter**  
+
+- Max **2 uppercase** characters  
+
+- Max **2 special** characters  
+
+- Character sets:
+
+  - A–E  
+
+  - a–e  
+
+  - 1–5  
+
+  - $, &, %
+
+
+
+### Expected counts (for validation)
+
+- L = 4 → **4500**  
+
+- L = 5 → **207000**  
+
+- L = 6 → **5287500**
+
+
+
+### ▶ Run
+
+~~~bash
 
 cd activity1_2
 
 python password_generator.py
+
+~~~
+
+
 
 Outputs saved in:
 
@@ -94,42 +122,67 @@ activity1_2/output/
 
 
 
-🚆 Activity 1.3 — UK Railway Route Planner
+## 🚆 Activity 1.3 — UK Railway Route Planner
 
-A shortest‑route engine using the full UK rail network dataset (500+ stations).
 
-Task
+
+A shortest‑route engine using the full **UK rail network** dataset (500+ stations).
+
+
+
+### Task
 
 Given:
 
-start station
-end station
-required stations (must be visited exactly once)
-Find the lowest‑cost route that starts at the start station, visits all required stations, and ends at the destination.
+- **start** station  
 
-Algorithm (high level)
+- **end** station  
 
-Load railway CSV (undirected, weighted graph)
-Normalise station names (case‑insensitive, trims whitespace)
-Identify important nodes (start + required + end)
-Compute Dijkstra shortest paths between important nodes
-Try all permutations of the required stations
-Sum segment costs, choose the cheapest ordering
-Rebuild the full station‑by‑station route
-Save results as text + JSON
-▶ Run
+- **required** stations (must be visited exactly once)
+
+
+
+Find the **lowest‑cost route** that starts at the start station, visits all required stations, and ends at the destination.
+
+
+
+### Algorithm (high level)
+
+1. Load railway CSV (undirected, weighted graph)  
+
+2. Normalise station names (case‑insensitive, trims whitespace)  
+
+3. Identify important nodes (start + required + end)  
+
+4. Compute **Dijkstra** shortest paths between important nodes  
+
+5. Try all permutations of the required stations  
+
+6. Sum segment costs, choose the **cheapest** ordering  
+
+7. Rebuild the **full station‑by‑station route**  
+
+8. Save results as text + JSON
+
+
+
+### ▶ Run
+
+~~~bash
 
 cd activity1_3
 
 python route_planner.py
 
+~~~
+
+
+
 Example input (interactive prompts):
 
-london
+london exeter st davids bristol temple meads, reading
 
-exeter st davids
 
-bristol temple meads, reading
 
 Outputs saved in:
 
@@ -141,45 +194,17 @@ activity1_3/output/
 
 
 
-📁 Repository Structure
-
-AdvancedAlgorithms/
-
-  activity1_1/
-
-    degree_calculator.py
-
-    activity1_1_marks.csv
-
-    cs modules.csv
-
-    output/
+## 📁 Repository Structure
 
 
 
-  activity1_2/
+AdvancedAlgorithms/ activity1_1/ degree_calculator.py activity1_1_marks.csv cs modules.csv output/
 
-    password_generator.py
+activity1_2/ password_generator.py output/
 
-    output/
+activity1_3/ route_planner.py activity1_3_railnetwork_data.csv task1_3_UK_Railway_Map.pdf output/
 
-
-
-  activity1_3/
-
-    route_planner.py
-
-    activity1_3_railnetwork_data.csv
-
-    task1_3_UK_Railway_Map.pdf
-
-    output/
-
-
-
-  .gitignore
-
-  README.md
+.gitignore README.md
 
 
 
@@ -187,10 +212,15 @@ AdvancedAlgorithms/
 
 
 
-🧑‍💻 About Me
+## 🧑‍💻 About Me
 
-Tanjil Siam
-BSc Computer Science — UWE Bristol
+
+
+**Tanjil Siam**  
+
+BSc Computer Science — **UWE Bristol**
+
+
 
 I focus on clean, efficient algorithmic solutions and practical engineering with clear outputs and reproducibility.
 
@@ -200,7 +230,10 @@ I focus on clean, efficient algorithmic solutions and practical engineering with
 
 
 
-📄 License
+## 📄 License
 
-This is a personal portfolio repository.
-All code written by Tanjil Siam.
+
+
+This is a personal portfolio repository.  
+
+All code written by **Tanjil Siam**.
