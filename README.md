@@ -52,6 +52,7 @@ cd activity1_1
 
 python degree_calculator.py
 
+'''
 
 
 ---
