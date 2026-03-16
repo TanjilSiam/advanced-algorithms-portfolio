@@ -180,7 +180,11 @@ python route_planner.py
 
 Example input (interactive prompts):
 
-london exeter st davids bristol temple meads, reading
+london
+ 
+exeter st davids
+
+ bristol temple meads, reading
 
 
 
