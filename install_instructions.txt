@@ -1,0 +1,51 @@
+=================================================================
+INSTALLATION INSTRUCTIONS FOR NON-STANDARD PYTHON LIBRARIES
+=================================================================
+
+This coursework uses the following external libraries:
+
+1. face_recognition
+2. dlib
+3. opencv-python
+4. numpy
+5. pillow
+
+These are NOT part of standard Python and must be installed manually.
+
+-----------------------------------------------------------------
+1. Install core dependencies
+-----------------------------------------------------------------
+
+pip install numpy
+pip install pillow
+pip install opencv-python
+
+-----------------------------------------------------------------
+2. Install dlib (Windows)
+-----------------------------------------------------------------
+
+If installing dlib normally fails on your system, you must install
+a precompiled wheel for your Python version and architecture.
+
+Example:
+
+pip install dlib‑19.24.99‑cp312‑cp312‑win_amd64.whl
+
+(This wheel can be downloaded from the official prebuilt sources.)
+
+-----------------------------------------------------------------
+3. Install face_recognition
+-----------------------------------------------------------------
+
+After dlib is installed successfully, run:
+
+pip install face_recognition
+
+-----------------------------------------------------------------
+Notes:
+-----------------------------------------------------------------
+
+- Python 3.x is required.
+- All programs were developed and tested with these libraries. 
+- The face_recognition and dlib libraries are used only for the 
+  required Activity 1.4 as per the coursework brief.
