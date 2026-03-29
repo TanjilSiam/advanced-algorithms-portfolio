@@ -26,6 +26,9 @@ cd activity1_1
 python degree_calculator.py
 ~~~
 
+outputs are saved in:
+activity1_1/output
+
 ---
 
 # 🔐 Activity 1.2 — Constrained Password Generator
