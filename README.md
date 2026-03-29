@@ -196,6 +196,41 @@ activity1_3/output/
 
 ---
 
+## ⚡ Activity 1.4 — Serial vs Parallel Image Processing (Multiprocessing)
+
+Activity 1.4 demonstrates how serial execution compares to parallel execution when processing a batch of images.  
+The goal is to show how a CPU‑bound task (such as scanning many image files and performing analysis on each one) can be accelerated using Python's multiprocessing capabilities.
+
+### 🔍 What the task involves
+- A **serial version** that processes images one by one in a loop.
+- A **parallel version** using `ProcessPoolExecutor` to distribute image-processing work across CPU cores.
+- Both scripts attempt to load images, detect faces, and compare them to a known reference encoding.
+- CPU‑bound workloads benefit greatly from parallel execution, reducing overall wall‑clock time.
+
+### 🧠 Key learning outcomes
+- How to structure a multiprocessing program in Python.
+- How to manage worker initialization and data sharing.
+- Safe handling of per‑file errors when processing large batches.
+- Understanding the difference between serial throughput and parallel throughput.
+
+### ▶ Run
+```bash
+# Serial version
+python activity1_4_serial.py
+
+# Parallel version
+python parallel_search.py
+📄 Output
+The parallel script produces a summary file:
+activity1_4/output/matches.txt
+This includes:
+total elapsed time,
+list of matches,
+and any file‑level errors encountered.
+📌 Note
+The provided dataset contains small facial images. While the detection library may not identify all faces reliably on every machine, the parallelisation logic, structure, and overall design are correct and fulfil the task's intent.
+
+---
 
 
 ## Project Structure
