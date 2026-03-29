@@ -27,7 +27,7 @@ python degree_calculator.py
 ~~~
 
 outputs are saved in:
-activity1_1/output
+activity1_1/output/
 
 ---
 
